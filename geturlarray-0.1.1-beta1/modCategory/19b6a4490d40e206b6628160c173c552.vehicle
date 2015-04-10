@@ -1,0 +1,60 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Snippets' => 
+    array (
+      '959231786fe5025c5cc0148691214ee2' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":3,"source":1,"property_preprocess":0,"name":"getUrlArray","description":"","editor_type":0,"category":0,"cache_type":0,"snippet":"\\/*************************************\\nScript by Martin Sanders.\\n\\nBuild array from URL string, example:\\n\\n[[!getUrlArray? &parameter=`variableID` &shorten=`5`]]\\n*************************************\\/\\n\\n$query = explode(\'&amp;\', $_SERVER[\'QUERY_STRING\']);\\n$params = array();\\n\\nforeach($query as $param) {\\n\\tlist($name, $value) = explode(\'=\', $param);\\n\\t(urldecode($value) !== \\"\\" ? $params[urldecode($name)][] = ($shorten ? mb_substr(urldecode($value),0,$shorten) : $value)  : \'\');\\n}\\nif(!empty($_GET[$parameter])) {\\n\\treturn( implode(\',\',$params[$parameter]));\\n}","locked":0,"properties":"a:0:{}","moduleguid":"","static":0,"static_file":"","content":"\\/*************************************\\nScript by Martin Sanders.\\n\\nBuild array from URL string, example:\\n\\n[[!getUrlArray? &parameter=`variableID` &shorten=`5`]]\\n*************************************\\/\\n\\n$query = explode(\'&amp;\', $_SERVER[\'QUERY_STRING\']);\\n$params = array();\\n\\nforeach($query as $param) {\\n\\tlist($name, $value) = explode(\'=\', $param);\\n\\t(urldecode($value) !== \\"\\" ? $params[urldecode($name)][] = ($shorten ? mb_substr(urldecode($value),0,$shorten) : $value)  : \'\');\\n}\\nif(!empty($_GET[$parameter])) {\\n\\treturn( implode(\',\',$params[$parameter]));\\n}"}',
+        'guid' => '78b4ecc7f84fc92771623e75c6c6c701',
+        'native_key' => 3,
+        'signature' => 'cd3317014a4798940ecdf9053d014bdf',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Chunks' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'TemplateVars' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Templates' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'templatename',
+    ),
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+  ),
+  'namespace' => 'geturlarray',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'fab96291a105572d0387c5743467f4da',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '19b6a4490d40e206b6628160c173c552',
+  'native_key' => 1,
+  'object' => '{"id":1,"parent":0,"category":"getUrlArray"}',
+);
